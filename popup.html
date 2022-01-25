@@ -1,0 +1,35 @@
+<html>
+<head>
+  <script type="text/javascript" src="popup.js"></script>
+  <link href="stylesheet.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+  <header id="Header">
+    <h1>Cuss Censor</h1>
+  </header>
+  <main>
+    <h2>Choose Censor Options</h2>
+    <form>
+      <div id="Part_Div">      
+        <button id="Part_Cens" value="Part_Cens">Partial Censor (e.g. 'F*ck')</button>
+      </div>
+      <br><br><br>
+      <div id="Full_Div">
+        <button id="Full_Cens" value="Full_Cens">Full Censor (e.g. '****')</button>
+      </div>
+      <br><br><br>
+      <div id="Replace_Div">
+        <button id="Replace" value="Replace">Replacing Censor (e.g. 'Fudge')</button>
+      </div>
+      <br><br><br>
+      <div id="Off_Div">
+        <button id="Off" value="Off">Disable The Censor</button>
+      </div>
+      <br><br><br>
+    </form>
+    <p>Current setting is: <br><span id="Value">Part_Cens</span></p>
+  </main>
+</body>
+</html>
+<script src="content_script.js">
+</script>

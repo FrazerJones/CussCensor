@@ -1,0 +1,37 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "CussCensor",
+  "version": "0.2",
+  "description": "A browser extension with the set purpose of censoring swear words with four different censor options!",
+  "content_security_policy":"script-src 'self' https://apis.google.com; object-src 'self'",
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "storage",
+    "contextMenus",
+    "notifications"
+  ],
+  "browser_action": {
+    "default_icon": "icon_128.png",
+    "default_title": "shell",
+    "default_popup": "popup.html",
+    "js": [ "popup.js" ]
+  },
+  "icons": {
+    "128": "icon_128.png",
+    "48": "icon_48.png",
+    "32": "icon_32.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [ "*://*/*" ],
+      "js": [ "content_script.js" ],
+      "run_at": "document_end"
+      
+    }
+  ]
+  
+}
